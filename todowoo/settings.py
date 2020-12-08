@@ -10,7 +10,6 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 import os
-import django_heroku
 from pathlib import Path
 
 
@@ -124,6 +123,3 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 LOGIN_URL = '/login'
-
-# Activate Django-Heroku.
-django_heroku.settings(locals())
