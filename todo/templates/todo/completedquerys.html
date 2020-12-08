@@ -1,0 +1,13 @@
+{% extends 'todo/base.html' %}{% block content %}
+<div class="container">
+    <h1>Completed</h1>
+</div>
+
+<ul>
+    {% for query in querys %}
+    <li>
+        <a href="{% url 'viewquery' query.id %}">{% if query.important %} 
+            <b>{% endif %}{{ query.title }}{% if todo.important %} 
+            </b> {% endif %} {% if query.query %} - {{ query.query }}{% endif %} {{ query.datecompleted|date:'M j Y H:i' }}</a></li>
+    {% endfor %}
+</ul>{% endblock %}

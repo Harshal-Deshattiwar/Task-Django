@@ -1,0 +1,41 @@
+{% block content %}
+<style>
+    div {
+        margin: auto;
+    }
+    
+    body {
+        background-color: #b2ae69;
+        background-image: url("https://dm0qx8t0i9gc9.cloudfront.net/thumbnails/video/QIAQ9Rd/videoblocks-young-student-girl-with-laptop-and-diploma-elearning-4k-video-animated_sgsio3nml_thumbnail-1080_01.png");
+    }
+</style>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<link rel="icon" type="image/png" href="https://previews.123rf.com/images/captainvector/captainvector1703/captainvector170308919/74164515-academy-logo-element.jpg">
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<body style="background-color : #b2ae69">
+    <div class=" row d-flex justify-content-center text-center ">
+        <div class="row ">
+            <div class="col-sm-6 ">
+                <div class="card ">
+                    <div class="card-body ">
+                        <h5 class="card-title ">You can learn anything.</h5>
+                        <p class="card-text ">With <b><i>Task Academy</i></b>, teachers can identify gaps in their students’ understanding, tailor instruction, and meet the needs of every student.</p>
+                        <a href="{% url 'signupuser' %} " class="btn btn-dark ">Sign UP</a>
+                        <a href="{% url 'loginuser' %} " class="btn btn-light ">Login</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+
+{% endblock %}

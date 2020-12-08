@@ -1,0 +1,27 @@
+<br>&nbsp;&nbsp;&nbsp;{% if user.is_authenticated %} Logged In as {{user.username}}&nbsp;&nbsp;
+
+<head>
+    <link rel="icon" type="image/png" href="{% static 'todo/logo.png' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<ul class="nav">
+    <li class="nav-item">
+        <a class="nav-link text-success" href="{% url 'createquery' %}">Create</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link text-warning" href="{% url 'currenttodos' %}">Current</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link text-info" href="{% url 'completedquerys' %}">Completed</a>
+    </li>
+</ul>
+
+
+<form action="{% url 'logoutuser' %}" method="POST">
+    {% csrf_token %} &nbsp;&nbsp;&nbsp;
+    <button type="submit" class="btn btn-primary">Logout</button>
+</form> {% else %} <a href="{% url 'signupuser' %}">Sign Up</a>
+<a href="{% url 'loginuser' %}">Login</a> {% endif %}
+<br>
+<br>{% block content %}{% endblock %}

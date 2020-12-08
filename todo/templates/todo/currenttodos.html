@@ -1,0 +1,7 @@
+<br>&nbsp;&nbsp;&nbsp;&nbsp; {% extends 'todo/base.html' %}{% block content %}Current
+<ul>
+    {% for query in querys %}
+    <li>
+        <a href="{% url 'viewquery' query.id %}">{% if query.important %} <b>{% endif %}{{ query.title }}{% if todo.important %} </b> {% endif %} {% if query.query %} - {{ query.query }}{% endif %} </a></li>
+    {% endfor %}
+</ul>{% endblock %}
